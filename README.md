@@ -1,6 +1,6 @@
 # **`Nations Assets 🌍`**
 
-collection of assets for `Nations` package.
+collection of **`common`** localization assets for `Nations` package.
 
 # FAQ
 
@@ -17,12 +17,12 @@ collection of assets for `Nations` package.
 | English  | 👍  |
 | Spanish  | 👍  |
 
-# Other Languages ?
+# Other Languages support ?
 
 if you cant find the language you need, feel to contribute to the project .
 
 # Contributing
 
 - add or update what you need
-- use the command `dart bin/validate.dart` to make sure all assets are valid
+- use the command `flutter test` to make sure all assets are valid
 - open a `PR`

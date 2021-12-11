@@ -26,7 +26,7 @@ void main(List<String> args) {
     }
 
     for (final key in allKeysList) {
-      // vlidate the key is not empty
+      // validate the key is not empty
       // or the key is not missing
       for (final lang in supportedLanguages.keys) {
         validateAssets(
@@ -77,7 +77,6 @@ void validateAssets(String key, Map<String, Object?> assets, String lang) {
   } else if (parents.length < 2) {
     checkType(parents, value, lang);
   } else if (value is Map<String, Object>) {
-    // print('$lang after $keytoDigInto  ${nested.join('.')}');
     validateAssets(key, value, lang);
   } else {
     throw 'not valid value $value';
