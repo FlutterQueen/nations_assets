@@ -1,5 +1,5 @@
 name: nations_assets
-description: localization assets for nations - queen support for localization in flutter, part of queen
+description: localization assets for nations - part of queen
 version: 0.0.4
 homepage: https://github.com/FlutterQueen/nations_assets
 issue_tracker: https://github.com/FlutterQueen/nations_assets/issues
@@ -8,3 +8,4 @@ environment:
 
 dev_dependencies:
   flutter_lints: ^1.0.0
+  test: ^1.20.1
