@@ -4,6 +4,7 @@ import 'package:nations_assets/assets/ar.dart';
 import 'package:nations_assets/assets/en.dart';
 import 'package:nations_assets/assets/es.dart';
 import 'package:nations_assets/assets/fr.dart';
+import 'package:nations_assets/assets/tur.dart';
 
 export 'package:nations_assets/assets/ar.dart';
 export 'package:nations_assets/assets/en.dart';
@@ -20,6 +21,9 @@ Map<String, Object> assetsByLanguage(String langCode) {
       return esAssets;
     case 'fr':
       return frAssets;
+    case 'tur':
+    case 'tr':
+      return TurAssets;
     default:
       return {};
   }

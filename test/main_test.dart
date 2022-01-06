@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:nations_assets/assets/tur.dart';
 import 'package:nations_assets/nations_assets.dart';
 import 'package:test/test.dart';
 
@@ -11,6 +12,8 @@ void main() {
     expect(assetsByLanguage('en'), equals(enAssets));
     expect(assetsByLanguage('es'), equals(esAssets));
     expect(assetsByLanguage('fr'), equals(frAssets));
+    expect(assetsByLanguage('tr'), equals(TurAssets));
+    expect(assetsByLanguage('tur'), equals(TurAssets));
     expect(
       assetsByLanguage(''),
       equals({}),
@@ -29,6 +32,8 @@ void _testIt() {
     'en': enAssets,
     'es': esAssets,
     'fr': frAssets,
+    'tr': TurAssets,
+    'tur':TurAssets,
   };
 
   final allKeysList = <String>[];
