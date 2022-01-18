@@ -1,5 +1,7 @@
 # **`Q U E E N`** 👑
 
+[![codecov](https://codecov.io/gh/FlutterQueen/nations_assets/branch/master/graph/badge.svg?token=R7ZQSUVWFN)](https://codecov.io/gh/FlutterQueen/nations_assets)
+
 # **`Nations Assets`** 🌍
 
 collection of **`common`** localization assets for `Nations` package.
