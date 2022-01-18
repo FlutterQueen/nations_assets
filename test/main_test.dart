@@ -12,8 +12,8 @@ void main() {
     expect(assetsByLanguage('en'), equals(enAssets));
     expect(assetsByLanguage('es'), equals(esAssets));
     expect(assetsByLanguage('fr'), equals(frAssets));
-    expect(assetsByLanguage('tr'), equals(TurAssets));
-    expect(assetsByLanguage('tur'), equals(TurAssets));
+    expect(assetsByLanguage('tr'), equals(turAssets));
+    expect(assetsByLanguage('tur'), equals(turAssets));
     expect(
       assetsByLanguage(''),
       equals({}),
@@ -32,8 +32,8 @@ void _testIt() {
     'en': enAssets,
     'es': esAssets,
     'fr': frAssets,
-    'tr': TurAssets,
-    'tur':TurAssets,
+    'tr': turAssets,
+    'tur': turAssets,
   };
 
   final allKeysList = <String>[];
@@ -54,10 +54,11 @@ void _testIt() {
     // or the key is not missing
     for (final lang in supportedLanguages.keys) {
       validateAssets(
-          key,
-          // .split('.')..removeWhere((element) => element.isEmpty),
-          supportedLanguages[lang]!,
-          lang);
+        key,
+        // .split('.')..removeWhere((element) => element.isEmpty),
+        supportedLanguages[lang]!,
+        lang,
+      );
     }
   }
   print('all assets are valid ✔');
@@ -122,9 +123,18 @@ List<String> findKeys(List<String> parents, Map map, String lang) {
   final keysList = <String>[];
   for (final key in map.keys) {
     if (map[key] is Map) {
-      keysList.addAll(findKeys([...parents, key], map[key] as Map, lang));
+      keysList.addAll(
+        findKeys(
+          [
+            ...parents,
+            key.toString(),
+          ],
+          map[key] as Map,
+          lang,
+        ),
+      );
     } else if (map[key] is String) {
-      keysList.add(buildKeyWithParents(key, parents));
+      keysList.add(buildKeyWithParents(key.toString(), parents));
     }
   }
   return keysList;
@@ -145,7 +155,7 @@ String buildKeyWithParents(String key, List<String> parents) {
     /// is not nested
     return key;
   } else {
-    return parents.join('.') + '.' + key;
+    return '${parents.join('.')}.$key';
   }
 }
 
@@ -156,7 +166,7 @@ Object? getNested(Map map, String key) {
     if (map[nestedKey] == null) return null;
     nestedKeys.removeAt(0);
     return getNested(
-      map[nestedKey],
+      map[nestedKey] as Map,
       nestedKeys.join('.'),
     );
   } else {

@@ -1,5 +1,5 @@
 /// `Turkish` assets
-const TurAssets = <String, Object>{
+const turAssets = <String, Object>{
   "date": "tarih",
   "time": "zaman",
   "enter": "girmek",

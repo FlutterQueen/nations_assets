@@ -23,7 +23,7 @@ Map<String, Object> assetsByLanguage(String langCode) {
       return frAssets;
     case 'tur':
     case 'tr':
-      return TurAssets;
+      return turAssets;
     default:
       return {};
   }
