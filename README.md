@@ -10,6 +10,7 @@ collection of **`common`** localization assets for `Nations` package.
 | English                   |
 | Spanish                   |
 | French                    |
+| Turkish                   |
 
 # Other Languages support ?
 

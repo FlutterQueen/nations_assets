@@ -79,4 +79,6 @@ const arAssets = <String, Object>{
   "menu": "القائمه",
   "sort_by": "ترتيب حسب",
   "view_all": "عرض الكل",
+  "description": "الوصف",
+  "notes": "ملاحظات",
 };
